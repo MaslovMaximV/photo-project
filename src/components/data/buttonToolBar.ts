@@ -6,7 +6,7 @@ export type ButtonToolBar = {
 export const buttonToolBar = [
     {
       id: 1,
-      name: "Немного больше о себе",
+      name: "Блог",
     },
     {
       id: 2,
