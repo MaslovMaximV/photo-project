@@ -1,0 +1,9 @@
+.back{
+    background: #faf5f5;
+    width: 99%;
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
