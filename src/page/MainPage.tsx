@@ -55,14 +55,14 @@ export const MainPage = (props: MainPageProps) => {
                   alignItems: "center"
                 }}
               >
-                <Link href="https://www.instagram.com/tanya_turgeneva/" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
+                <Link href="#" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
                   <InstagramIcon sx={{ color: "black" }} />
                 </Link>
 
-                <Link href="https://t.me/tanya_turgeneva1" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
+                <Link href="#" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
                   <TelegramIcon sx={{ color: "black" }} />
                 </Link>
-                <Link href="https://wa.me/89103453629" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
+                <Link href="#" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon sx={{ color: "black" }} />
                 </Link>
               </Stack>
