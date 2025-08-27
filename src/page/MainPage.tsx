@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { Box, Stack, Typography, Link, Divider } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { ToolBar } from "../components/toolbar/ToolBar";
 import { Content } from "../components/content/Content";
 import { Portfolio } from "./Portfolio";
+import { Footer } from "../components/footer/Footer";
 import { itemData } from "../components/data/itemData.ts";
 import { buttonToolBar } from "../components/data/buttonToolBar.ts";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 type MainPageProps = {};
 
@@ -38,35 +36,7 @@ export const MainPage = (props: MainPageProps) => {
             >
               <Content itemData={itemData} />
             </Box>
-            <Box
-              id="contacts"
-              sx={(theme) => ({
-                py: 2,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              })}
-            >
-              <Stack
-                direction="row"
-                spacing={{ xs: 2, sm: 3, md: 4 }}
-                divider={<Divider orientation="vertical" flexItem />}
-                sx={{
-                  alignItems: "center"
-                }}
-              >
-                <Link href="#" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
-                  <InstagramIcon sx={{ color: "black" }} />
-                </Link>
-
-                <Link href="#" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
-                  <TelegramIcon sx={{ color: "black" }} />
-                </Link>
-                <Link href="#" underline="none" sx={{ color: "black" }} target="_blank" rel="noopener noreferrer">
-                  <WhatsAppIcon sx={{ color: "black" }} />
-                </Link>
-              </Stack>
-            </Box>
+            <Footer />
           </>
         );
     }

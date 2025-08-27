@@ -2,6 +2,7 @@
 import { Box, Stack, Typography, Container, Grid } from "@mui/material";
 import { ToolBar } from "../components/toolbar/ToolBar";
 import { PhotoCard } from "../components/photoCard/PhotoCard";
+import { Footer } from "../components/footer/Footer";
 import { buttonToolBar } from "../components/data/buttonToolBar.ts";
 
 type PortfolioProps = {
@@ -114,6 +115,7 @@ export const Portfolio = (props: PortfolioProps) => {
               </Box>
             </Container>
           </Box>
+          <Footer />
         </Stack>
       </div>
     </>
