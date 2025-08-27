@@ -1,6 +1,7 @@
 
-import { Box, Stack, Typography, Container } from "@mui/material";
+import { Box, Stack, Typography, Container, Grid } from "@mui/material";
 import { ToolBar } from "../components/toolbar/ToolBar";
+import { PhotoCard } from "../components/photoCard/PhotoCard";
 import { buttonToolBar } from "../components/data/buttonToolBar.ts";
 
 type PortfolioProps = {
@@ -37,6 +38,7 @@ export const Portfolio = (props: PortfolioProps) => {
               display: "flex",
               flexDirection: "column",
               padding: { xs: "20px 10px 0 10px", sm: "30px 15px 0 15px", md: "40px 20px 0 20px" },
+              overflow: "auto"
             })}
           >
             <Container maxWidth="lg">
@@ -63,8 +65,53 @@ export const Portfolio = (props: PortfolioProps) => {
                   mx: "auto"
                 }}
               >
-                Здесь будут представлены мои лучшие работы и проекты
+                Здесь представлены мои лучшие работы и проекты
               </Typography>
+              
+              {/* Сетка карточек */}
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: {
+                    xs: "1fr",
+                    sm: "repeat(2, 1fr)",
+                    md: "repeat(3, 1fr)"
+                  },
+                  gap: 3,
+                  mt: 4
+                }}
+              >
+                <PhotoCard 
+                  title="Фотография"
+                  description="Профессиональная фотосъемка портретов, свадеб и мероприятий"
+                  cardIndex={1}
+                />
+                <PhotoCard 
+                  title="Веб-дизайн"
+                  description="Создание современных и адаптивных веб-сайтов"
+                  cardIndex={2}
+                />
+                <PhotoCard 
+                  title="Графический дизайн"
+                  description="Разработка логотипов, брендинг и полиграфия"
+                  cardIndex={3}
+                />
+                <PhotoCard 
+                  title="UI/UX дизайн"
+                  description="Проектирование пользовательских интерфейсов"
+                  cardIndex={4}
+                />
+                <PhotoCard 
+                  title="Видеомонтаж"
+                  description="Создание рекламных роликов и видеоконтента"
+                  cardIndex={5}
+                />
+                <PhotoCard 
+                  title="3D моделирование"
+                  description="Создание трехмерных моделей и визуализация"
+                  cardIndex={6}
+                />
+              </Box>
             </Container>
           </Box>
         </Stack>
